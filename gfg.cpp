@@ -6,6 +6,8 @@
  
 //our header file
 #include "gfg.h"
+#include "ThreadPool.h"
+
 #define ll long long
  
 
@@ -45,12 +47,16 @@ void vm()
 	     printf("Unable to Launch JVM %d\n",rv);
 	 else
 	     printf("Launched JVM! :)\n");
-	 
+	
+	jvm->DestroyJavaVM(); 
 
 }
 
 
 int main(){
-	vm();
+	printf("using pool:)\n");
+	ThreadPool pool(1);
+	pool.enqueue(vm);
+	//vm();
 	return 0;
 }
