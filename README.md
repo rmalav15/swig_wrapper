@@ -1,11 +1,13 @@
 # swig_wrapper
 A sample code to use JAVA, PYTHON, and C++ together using swig
 
-- Install SWIG
+- Install SWIG: sudo apt-get install swig
 
-- Please update JAVA JDK location in setup.py at line numbers 75,76,79
+- Download [JAVA](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-- And set export LD_LIBRARY_PATH='$JAVA_HOME/jre/lib/amd64/server'
+- Update JAVA JDK location in setup.py at line numbers 75,76,79
+
+- set export LD_LIBRARY_PATH='(JAVA JDK location)/jre/lib/amd64/server'
 
 - Run: sh setup.sh
 
